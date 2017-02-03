@@ -6,29 +6,29 @@
 /*   By: kpatel <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/27 22:35:53 by kpatel            #+#    #+#             */
-/*   Updated: 2017/01/27 22:36:04 by kpatel           ###   ########.fr       */
+/*   Updated: 2017/02/02 15:39:56 by kpatel           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		main(int argc, char **argv)
+int		main(int ac, char **av)
 {
 	int		i;
 	
 	i = 0;
-	if (argc != 2)
+	if (ac != 2)
 		write(1, "\n", 1);
 	else
 	{
-		while (argv[1][i] != '\0')
+		while (av[1][i] != '\0')
 		{
 			i++;
 		}
 		i = i - 1;
 		while (i >= 0)
 		{
-			write(1, &argv[1][i], 1);
+			write(1, &av[1][i], 1);
 			i--;
 		}
 		write(1, "\n", 1);
